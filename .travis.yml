@@ -2,7 +2,8 @@ sudo: false
 language: java
 jdk:
   - oraclejdk8
-  
+env:
+  secure: "T6Wcm3YBWVwUasz4QBio+9Tyxxc7z5tKSDN0//s6LULo05d0TJ127n3qlrzQDwhhwcZ7N0qWdLHmlzDd9bFFTt9y3hwsR33sdE3ehcRBpLvBrqUmHbSNvrLxTfXyrCJLN1XwLOM7XM2jW+cS5BcgrGFHn94CzgCnHAX5Rqseh6+ypC4JiGYp6i9375aEM1tPy8ptWbYV0XT4kqLUhPa45ThRoCbofYinhgO9/OYf3NMguRkiKCzUM6/gRScN3Vz+Bvn4hOBmAAiuy2CdWm38TSJDeXQAP8UDpUdhIZXDpFsge0i0WW1rnNQsYVzj+ZKOu6/oUEU96PptUHN/t+MsIGq1Et3cfvXgySt6OmMe2fGlh0dOsmA3RUEhfpAyAqnw1O3st63bYEGJ2YCfT4SufauCHMWAQSQvWqd0Ca5nv71c3tptXHCRdudOc1H6wOY6i4Btvv1N6mFjfRpv4s9QrSoftbIUvm4NzPghRTKqTWJQZW8XGS1tbic2nPpwTnXifeAWi+QRX2IcVXMPsmvaI4ux2ok6ZV+zNKdRhOY/xhXgTFj+YxEFo828LFuUKlxU5t+zrbcTJcFKPDvWvmUg5iBkM8lTUB2k+nTet7OxpW8o6AEwCIR/91Lirw2kxLgQqs9e9sJmECkR6nrbvmMQ2XSrM6DDUtrZrEZ9pXEFqlo="
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
