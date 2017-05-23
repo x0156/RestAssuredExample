@@ -25,8 +25,8 @@ public abstract class RAConfig {
 
     @BeforeClass
     public static void setUpCaseFlow() {
-    	RestAssured.proxy("host",8080);
-    	RestAssured.proxy.withAuth("uname", "g0tch@..1");
+    	//RestAssured.proxy("host",8080);
+    	//RestAssured.proxy.withAuth("uname", "g0tch@..1");
         RestAssured.useRelaxedHTTPSValidation();
         RestAssured.baseURI=REST_URI;
     }
