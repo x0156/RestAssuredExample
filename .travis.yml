@@ -6,7 +6,7 @@ jdk:
 before_install:
  - chmod +x gradlew
 
-./gradlew -q  clean test assemble
+script:./gradlew -q  clean test assemble
 
 deploy:
   provider: releases
