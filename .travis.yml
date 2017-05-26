@@ -17,6 +17,7 @@ script: "./gradlew -q  clean test assemble"
 
 notifications:
   hipchat: $HIPTOKEN@3884875
+  notify: true
   
 before_deploy:
   - export RELEASE_FILE=$(ls build/libs/RestAssuredExample-*.jar)
