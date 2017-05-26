@@ -16,8 +16,12 @@ before_install:
 script: "./gradlew -q  clean test assemble"
 
 notifications:
-  hipchat: $HIPTOKEN@3884875
-  notify: true
+  hipchat:
+     rooms:
+      -  $HIPTOKEN@3884875
+    template:
+      - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message} (<a href="%{build_url}">Details</a>/<a href="%{compare_url}">Change view</a>)'
+    format: html
   
 before_deploy:
   - export RELEASE_FILE=$(ls build/libs/RestAssuredExample-*.jar)
