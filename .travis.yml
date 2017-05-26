@@ -26,3 +26,5 @@ deploy:
   overwrite: true
   on:
     tags: false
+notifications:
+  hipchat: $HIPTOKEN@rassure
