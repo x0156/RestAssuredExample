@@ -22,13 +22,17 @@ notifications:
   
 before_deploy:
   - export RELEASE_FILE=$(ls build/libs/RestAssuredExample-*.jar)
-  
-deploy:
-  provider: releases
-  api_key: $GTOKEN
-  file:  $RELEASE_FILE
-  skip_cleanup: true
-  overwrite: true
-  on:
-    tags: true
-
+jobs:
+  include:
+    - script: "./gradlew -q  clean test"
+    - script: "./gradlew -q  clean assemble"
+    - stage: GitHub Release
+      script: echo "Deploying $RELEASE_FILE to GitHub releases ..."
+      deploy:
+        provider: releases
+        api_key: $GTOKEN
+        file:  $RELEASE_FILE
+        skip_cleanup: true
+        overwrite: true
+        on:
+          tags: true
