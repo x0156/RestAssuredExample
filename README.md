@@ -8,4 +8,4 @@ Testing
 
 # License
 
-Apache 2.0
+Licensed under [Apache v2.0](LICENSE)
