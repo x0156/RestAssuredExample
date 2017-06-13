@@ -4,6 +4,6 @@
 
 Rest-Assured Example v0.0.1
 
-Testing 
+Testing
 
 # License
