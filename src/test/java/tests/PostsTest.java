@@ -37,7 +37,7 @@ public class PostsTest extends RAConfig {
 
 	public void getPostTest(int id) {
 		get("/posts/{id}", id).then().assertThat().body("id", equalTo(id)).body("title", notNullValue())
-				.body("body", notNullValue()).body("userId", notNullValue());
+				.body("body", notNullValue()).body("unknownKey", notNullValue());
 		LOGGER.info(String.format("get::post [%s] verified", id));		
 	}
 	@Test
